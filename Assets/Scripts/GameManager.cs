@@ -8,10 +8,16 @@ public class GameManager : MonoBehaviour
 {
     public int result = 0;
     public Text scoreText;
-
+    
     public void AddCoin(int coinToAdd)
     {
         result += coinToAdd;
+        scoreText.text = result.ToString();
+    }
+
+    public void AddDiamond(int diamond)
+    {
+        result += diamond;
         scoreText.text = result.ToString();
     }
 
